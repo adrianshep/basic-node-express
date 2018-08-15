@@ -12,7 +12,7 @@ var app = express();
 console.log("Hello World");
 
 /** 2) A first working Express Server */
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
