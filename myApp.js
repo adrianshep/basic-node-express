@@ -1,6 +1,6 @@
 
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 // --> 7)  Mount the Logger middleware here
 
@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 });
 
 /** 4) Serve static assets  */
-
+app.use(express.static(__dirname + "/public"));
 
 /** 5) serve JSON on a specific route */
 
