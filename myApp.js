@@ -50,7 +50,13 @@ app.use(function middleware(req, res, next) {
 });
 
 /** 8) Chaining middleware. A Time server */
-
+app.get("/now", middleware(req, res, next) {
+  req.string = "example";
+  next();
+},
+  function (req, res) {
+      res.send(req.string);
+  });
 
 /** 9)  Get input from client - Route parameters */
 
