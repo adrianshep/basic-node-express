@@ -59,7 +59,9 @@ app.get("/now", middleware(req, res, next) {
   });
 
 /** 9)  Get input from client - Route parameters */
-
+app.get("/:echo/echo", function(req, res) {
+  res.json(req.params);
+});
 
 /** 10) Get input from client - Query parameters */
 // /name?first=<firstname>&last=<lastname>
