@@ -74,7 +74,7 @@ app.get("/name", function(req, res) {
 
 /** 11) Get ready for POST Requests - the `body-parser` */
 // place it before all the routes !
-
+const bodyParser = require('body-parser');
 
 /** 12) Get data form POST  */
 
