@@ -77,6 +77,11 @@ app.get("/name", function(req, res) {
 const bodyParser = require('body-parser');
 
 /** 12) Get data form POST  */
+app.use(bodyParser.urlencoded({extended: false}))
+
+app.post("/form", function(req, res) {
+  res.send(req.body.str.split('').reverse().join(''))
+});
 
 
 
